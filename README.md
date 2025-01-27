@@ -3,14 +3,13 @@ Uso do aprendizado federado para treinamento em arquiteturas open source para a 
 
 A implementação prática utilizou dois dispositivos Raspberry Pi 5 como clientes e um notebook configurado como servidor.
 
-Para trocar o modelo usado para treinamento nos "Clientes" basta trocar o modelo, em "model" na função:
+Para trocar o modelo usado para treinamento nos "Clientes" basta trocar o modelo, em "model" na função "def create_model():"
 
-def create_model():
-    model = resnet18(weights="IMAGENET1K_V1")
-    num_ftrs = model.fc.in_features
-    model.fc = nn.Linear(num_ftrs, 2)  # 2 classes: positivo e negativo
-    return model
+exemplo:
 
+model = *modelo*(weights="IMAGENET1K_V1")
 
-O dataset usado se encontra na plataforma Kaggle "https://www.kaggle.com/datasets/adnanalaref/pneumonia-chest-xray". 
+O dataset usado se encontra na plataforma Kaggle "https://www.kaggle.com/datasets/adnanalaref/pneumonia-chest-xray".
+
+os códigos "cliente1", podem ser usado para cliente2, 3, assim por diante.
 
