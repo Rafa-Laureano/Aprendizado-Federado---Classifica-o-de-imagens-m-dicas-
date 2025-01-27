@@ -10,3 +10,6 @@ def create_model():
     num_ftrs = model.fc.in_features
     model.fc = nn.Linear(num_ftrs, 2)  # 2 classes: positivo e negativo
     return model
+
+
+O dataset usado se encontra na plataforma Kaggle
